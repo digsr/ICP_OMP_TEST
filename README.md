@@ -1,12 +1,13 @@
 # ICP算法功能使用说明
 
 # 下载
-git clone https://github.com/o0cto/ICP_TEST.git
+git clone https://github.com/digsr/ICP_OMP_TEST.git
 
 # 运行
 提供两种运行方式，二选一即可。
 
 ## 运行方式一：一键脚本
+export OMP_NUM_THREADS=4 //设置并行数（建议4核）
 ./setup.sh
 
 ## 运行方式二：在terminal命令顺序行执行以下指令
@@ -16,6 +17,7 @@ cd build
 cmake -DCMAKE_CXX_FLAGS=-fPIC ..
 make -j6
 
+export OMP_NUM_THREADS=4
 ./testICP
 
 =====================================
